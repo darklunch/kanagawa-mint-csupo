@@ -37,19 +37,19 @@ Full token reference: [SPEC.md](SPEC.md) (v1.3.0)
 | **Alacritty** | [`ports/alacritty/`](ports/alacritty/) | `import` in alacritty.toml |
 | **WezTerm** | [`ports/wezterm/`](ports/wezterm/) | Drop in `colors/` → `color_scheme = "Kanagawa Mint-Csupo"` |
 
-Marketplace submission steps for all of the above: [SUBMITTING.md](SUBMITTING.md)
-
 ## Wallpapers
 
-Seven 4K originals in [`wallpapers/`](wallpapers/), all rendered to spec by the
+Twelve 4K originals in [`wallpapers/`](wallpapers/), all rendered to spec by the
 scripts in [`wallpapers/scripts/`](wallpapers/scripts/) — something for everybody:
 
 | | |
 | :--- | :--- |
-| ![wave](wallpapers/wave.png) **wave** — the flagship: striped sun, layered seas | ![dusk](wallpapers/dusk.png) **dusk** — crescent moon, violet haze, stormier water |
-| ![gridwave](wallpapers/gridwave.png) **gridwave** — synthwave horizon grid | ![csupo](wallpapers/csupo.png) **csupo** — memphis doodles, maximum Klasky-Csupo |
-| ![seigaiha](wallpapers/seigaiha.png) **seigaiha** — traditional wave-scale pattern | ![prompt](wallpapers/prompt.png) **prompt** — a single mint chevron |
-| ![minimal](wallpapers/minimal.png) **minimal** — near-flat ink, one crest line | |
+| ![wave](wallpapers/wave.png) **wave** — the flagship: striped sun, layered seas | ![greatwave](wallpapers/greatwave.png) **greatwave** — the big claw, mint crest |
+| ![torii](wallpapers/torii.png) **torii** — gate silhouette against a striped sun | ![pixel](wallpapers/pixel.png) **pixel** — 16-bit sunset, chunky mountains |
+| ![dusk](wallpapers/dusk.png) **dusk** — crescent moon, violet haze, stormier water | ![gridwave](wallpapers/gridwave.png) **gridwave** — synthwave horizon grid |
+| ![bamboo](wallpapers/bamboo.png) **bamboo** — dark grove, patina nodes | ![circuit](wallpapers/circuit.png) **circuit** — mint traces, one parchment chip |
+| ![csupo](wallpapers/csupo.png) **csupo** — memphis doodles, maximum Klasky-Csupo | ![seigaiha](wallpapers/seigaiha.png) **seigaiha** — traditional wave-scale pattern |
+| ![prompt](wallpapers/prompt.png) **prompt** — a single mint chevron | ![minimal](wallpapers/minimal.png) **minimal** — near-flat ink, one crest line |
 
 ## Tools
 

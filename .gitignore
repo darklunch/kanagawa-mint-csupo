@@ -8,3 +8,6 @@ kmc-chromium.zip
 .claude/
 
 dist/
+
+# private working notes (submission checklists etc.)
+notes/
