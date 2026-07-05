@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Kanagawa Mint-Csupo - undo for kmc-minimal.reg
+; Removes the custom border colors and turns title-bar accent off
+; (back to Windows defaults). Sign out / restart explorer.exe after.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000000
+"AccentColorInactive"=-

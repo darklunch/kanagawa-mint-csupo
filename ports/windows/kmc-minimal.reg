@@ -1,0 +1,20 @@
+Windows Registry Editor Version 5.00
+
+; Kanagawa Mint-Csupo - minimal registry tweaks (spec v1.3.0)
+; Only the settings that have NO Settings-app equivalent.
+; Double-click to apply (no scripts, no execution policy). HKCU only.
+; Sign out / restart explorer.exe to see the border changes.
+;
+; Everything else (dark mode, accent #54E3B2, mint pointer, wallpaper)
+; is faster to set in Settings > Personalization / Accessibility --
+; see kmc-windows-setup.md sections 1-6.
+
+; --- Title bar colors (registry-only) ---
+; AccentColor         = active window border/title, mint  (ABGR: FF B2 E3 54)
+; AccentColorInactive = unfocused window border, ink #2a2a37 (ABGR: FF 37 2A 2A)
+; ColorizationColor   = DWM tint w/ intensity              (ARGB: C4 54 E3 B2)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"ColorPrevalence"=dword:00000001
+"AccentColor"=dword:ffb2e354
+"AccentColorInactive"=dword:ff372a2a
+"ColorizationColor"=dword:c454e3b2

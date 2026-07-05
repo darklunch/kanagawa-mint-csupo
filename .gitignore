@@ -1,0 +1,8 @@
+# reference copy of ethangilmore/zed-kanagawa — not ours to republish
+kanagawa-themes/
+
+# packaged store zips are built from the folders
+kmc-firefox.zip
+kmc-chromium.zip
+
+.claude/

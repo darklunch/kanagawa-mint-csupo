@@ -1,0 +1,24 @@
+{
+    "name": "kanagawa-mint-csupo",
+    "displayName": "Kanagawa Mint-Csupo",
+    "description": "Traditional Japanese earth tones meets high-energy cyberpunk mint. Sumi ink chrome, parchment text, electric mint accents.",
+    "version": "1.3.0",
+    "publisher": "darklunchstudios",
+    "author": "Dark Lunch Studios",
+    "license": "CC-BY-SA-4.0",
+    "engines": { "vscode": "^1.75.0" },
+    "categories": ["Themes"],
+    "keywords": ["kanagawa", "dark", "mint", "theme", "cyberpunk"],
+    "icon": "icon.png",
+    "galleryBanner": { "color": "#16161d", "theme": "dark" },
+    "repository": { "type": "git", "url": "https://github.com/darklunch/kanagawa-mint-csupo" },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Kanagawa Mint-Csupo",
+                "uiTheme": "vs-dark",
+                "path": "./themes/kanagawa-mint-csupo-color-theme.json"
+            }
+        ]
+    }
+}

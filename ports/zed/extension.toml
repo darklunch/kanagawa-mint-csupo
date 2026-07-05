@@ -1,0 +1,7 @@
+id = "kanagawa-mint-csupo"
+name = "Kanagawa Mint-Csupo"
+version = "1.3.0"
+schema_version = 1
+description = "Traditional Japanese earth tones meets high-energy cyberpunk mint — a Kanagawa variant with an electric mint accent."
+authors = ["Dark Lunch Studios"]
+themes = ["themes/kanagawa-mint-csupo.json"]

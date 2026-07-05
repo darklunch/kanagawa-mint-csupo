@@ -1,0 +1,26 @@
+; Kanagawa Mint-Csupo — Windows 11 theme
+; Double-click to apply. Pairs with wallpapers\wave.png in the repo root.
+[Theme]
+DisplayName=Kanagawa Mint-Csupo
+
+[Control Panel\Desktop]
+Wallpaper=%USERPROFILE%\Documents\Kanagawa Mint-Csupo\wallpapers\wave.png
+TileWallpaper=0
+WallpaperStyle=10
+
+[Control Panel\Colors]
+Background=31 31 40
+Hilight=84 227 178
+HotTrackingColor=84 227 178
+
+[VisualStyles]
+Path=%ResourceDir%\Themes\Aero\Aero.msstyles
+ColorStyle=NormalColor
+Size=NormalSize
+AutoColorization=0
+ColorizationColor=0XC454E3B2
+SystemMode=Dark
+AppMode=Dark
+
+[MasterThemeSelector]
+MTSM=RJSPBS

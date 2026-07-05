@@ -1,0 +1,21 @@
+{
+    "name": "Kanagawa Mint-Csupo",
+    "version": 1,
+    "url": "https://github.com/darklunch/kanagawa-mint-csupo",
+    "colorAccentBg": "#54e3b2",
+    "colorBg": "#1f1f28",
+    "colorBgDark": "#16161d",
+    "colorFg": "#c8c093",
+    "colorHighlightBg": "#2d4f67",
+    "colorWindowBg": "#181820",
+    "accentFromPage": false,
+    "accentOnWindow": false,
+    "transparencyTabs": false,
+    "transparencyTabBar": false,
+    "blur": 0,
+    "dimBlurred": false,
+    "contrast": 0,
+    "preferSystemAccent": false,
+    "radius": 4,
+    "alpha": 1
+}

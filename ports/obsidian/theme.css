@@ -1,0 +1,80 @@
+/* Kanagawa Mint-Csupo — Obsidian theme (spec v1.3.0)
+   Dark Lunch Studios · CC BY-SA 4.0
+   Dark mode only; light mode falls back to the same ink stack. */
+
+.theme-dark,
+.theme-light {
+  --background-primary: #1f1f28;
+  --background-primary-alt: #1a1a22;
+  --background-secondary: #1a1a22;
+  --background-secondary-alt: #181820;
+  --background-modifier-border: #2a2a37;
+  --background-modifier-border-hover: #54546d;
+  --background-modifier-border-focus: #54e3b2;
+  --background-modifier-hover: #22324980;
+  --background-modifier-active-hover: #2d4f6760;
+
+  --text-normal: #c8c093;
+  --text-muted: #727169;
+  --text-faint: #54546d;
+  --text-accent: #54e3b2;
+  --text-accent-hover: #7aa89f;
+  --text-on-accent: #16161d;
+  --text-selection: #2d4f67;
+  --text-highlight-bg: #54e3b230;
+
+  --interactive-normal: #1a1a22;
+  --interactive-hover: #223249;
+  --interactive-accent: #54e3b2;
+  --interactive-accent-hover: #7aa89f;
+
+  --titlebar-background: #181820;
+  --titlebar-background-focused: #181820;
+  --tab-background-active: #1f1f28;
+  --tab-text-color-focused-active: #c8c093;
+  --sidebar-background: #1a1a22;
+  --divider-color: #2a2a37;
+  --scrollbar-thumb-bg: #54546d4c;
+  --scrollbar-active-thumb-bg: #54546d99;
+
+  /* headings: spec title red, then the accent ladder */
+  --h1-color: #e46876;
+  --h2-color: #54e3b2;
+  --h3-color: #7e9cd8;
+  --h4-color: #e6c384;
+  --h5-color: #b06ecf;
+  --h6-color: #727169;
+
+  --link-color: #54e3b2;
+  --link-color-hover: #7aa89f;
+  --link-external-color: #7fb4ca;
+  --link-unresolved-color: #957fb8;
+
+  --code-normal: #c8c093;
+  --code-background: #16161d;
+  --code-keyword: #b06ecf;
+  --code-function: #54e3b2;
+  --code-property: #ff9e3b;
+  --code-value: #e46876;
+  --code-string: #98bb6c;
+  --code-comment: #727169;
+  --code-tag: #b06ecf;
+
+  --blockquote-border-color: #54e3b2;
+  --embed-border-left: 2px solid #54e3b2;
+  --checkbox-color: #54e3b2;
+  --checkbox-color-hover: #7aa89f;
+  --checklist-done-color: #727169;
+  --list-marker-color: #ff9e3b;
+  --hr-color: #2a2a37;
+  --table-header-background: #181820;
+  --table-row-even-background: #1a1a22;
+  --tag-color: #54e3b2;
+  --tag-background: #16161d;
+
+  --graph-node: #c8c093;
+  --graph-node-focused: #54e3b2;
+  --graph-node-tag: #b06ecf;
+  --graph-node-attachment: #ff9e3b;
+  --graph-line: #2a2a37;
+}

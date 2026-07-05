@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2,
+    "name": "Kanagawa Mint-Csupo",
+    "version": "1.3.0",
+    "description": "Traditional Japanese earth tones meets high-energy cyberpunk mint. Sumi ink chrome, parchment text, electric mint accents.",
+    "author": "Dark Lunch Studios",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "kanagawa-mint-csupo@darklunchstudios"
+        }
+    },
+    "theme": {
+        "properties": {
+            "color_scheme": "dark"
+        },
+        "colors": {
+            "frame": "#181820",
+            "frame_inactive": "#16161d",
+            "tab_background_text": "#727169",
+            "tab_selected": "#1f1f28",
+            "tab_text": "#c8c093",
+            "tab_line": "#54e3b2",
+            "tab_loading": "#54e3b2",
+            "toolbar": "#1f1f28",
+            "toolbar_text": "#c8c093",
+            "bookmark_text": "#c8c093",
+            "toolbar_top_separator": "#2a2a37",
+            "toolbar_bottom_separator": "#2a2a37",
+            "toolbar_vertical_separator": "#2a2a37",
+            "toolbar_field": "#16161d",
+            "toolbar_field_text": "#c8c093",
+            "toolbar_field_border": "#2a2a37",
+            "toolbar_field_focus": "#1a1a22",
+            "toolbar_field_text_focus": "#dcd7ba",
+            "toolbar_field_border_focus": "#54e3b2",
+            "toolbar_field_highlight": "#2d4f67",
+            "toolbar_field_highlight_text": "#dcd7ba",
+            "icons": "#c8c093",
+            "icons_attention": "#54e3b2",
+            "button_background_hover": "#223249",
+            "button_background_active": "#2d4f67",
+            "popup": "#1a1a22",
+            "popup_text": "#c8c093",
+            "popup_border": "#2a2a37",
+            "popup_highlight": "#2d4f67",
+            "popup_highlight_text": "#dcd7ba",
+            "sidebar": "#1a1a22",
+            "sidebar_text": "#c8c093",
+            "sidebar_border": "#2a2a37",
+            "sidebar_highlight": "#2d4f67",
+            "sidebar_highlight_text": "#dcd7ba",
+            "ntp_background": "#1f1f28",
+            "ntp_text": "#c8c093"
+        }
+    }
+}

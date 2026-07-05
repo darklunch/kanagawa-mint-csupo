@@ -1,0 +1,40 @@
+# Kanagawa Mint-Csupo — WezTerm color scheme (spec v1.3.0)
+# Install: place in ~/.config/wezterm/colors/ then set
+#   config.color_scheme = "Kanagawa Mint-Csupo"
+
+[metadata]
+name = "Kanagawa Mint-Csupo"
+author = "Dark Lunch Studios"
+
+[colors]
+background = "#1f1f28"
+foreground = "#c8c093"
+cursor_bg = "#54e3b2"
+cursor_fg = "#16161d"
+cursor_border = "#54e3b2"
+selection_bg = "#2d4f67"
+selection_fg = "#dcd7ba"
+split = "#2a2a37"
+scrollbar_thumb = "#54546d"
+
+ansi = ["#16161d", "#c34043", "#76946a", "#c0a36e", "#7e9cd8", "#957fb8", "#54e3b2", "#dcd7ba"]
+brights = ["#54546d", "#e46876", "#98bb6c", "#e6c384", "#7fb4ca", "#938aa9", "#7aa89f", "#ffffff"]
+
+[colors.tab_bar]
+background = "#181820"
+
+[colors.tab_bar.active_tab]
+bg_color = "#1f1f28"
+fg_color = "#c8c093"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#1a1a22"
+fg_color = "#727169"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#223249"
+fg_color = "#c8c093"
+
+[colors.tab_bar.new_tab]
+bg_color = "#181820"
+fg_color = "#54e3b2"
