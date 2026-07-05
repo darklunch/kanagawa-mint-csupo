@@ -5,156 +5,142 @@
 <defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#16161d"/>
-    <stop offset="0.55" stop-color="#1f1f28"/>
-    <stop offset="0.78" stop-color="#2b2436"/>
-    <stop offset="1" stop-color="#3a2a3e"/>
+    <stop offset="0.5" stop-color="#1f1f28"/>
+    <stop offset="0.82" stop-color="#33263a"/>
+    <stop offset="1" stop-color="#4a2f45"/>
   </linearGradient>
   <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0" stop-color="#e6c384"/>
     <stop offset="1" stop-color="#ff9e3b"/>
   </linearGradient>
   <radialGradient id="sunglow" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#ff9e3b" stop-opacity="0.38"/>
-    <stop offset="0.55" stop-color="#ff9e3b" stop-opacity="0.12"/>
+    <stop offset="0" stop-color="#ff9e3b" stop-opacity="0.4"/>
+    <stop offset="0.55" stop-color="#ff9e3b" stop-opacity="0.13"/>
     <stop offset="1" stop-color="#ff9e3b" stop-opacity="0"/>
   </radialGradient>
   <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#2b2436"/>
-    <stop offset="0.12" stop-color="#223249"/>
+    <stop offset="0" stop-color="#3a2a3e"/>
+    <stop offset="0.08" stop-color="#223249"/>
+    <stop offset="0.6" stop-color="#181820"/>
     <stop offset="1" stop-color="#16161d"/>
   </linearGradient>
-  <linearGradient id="gate" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#181820"/>
+  <linearGradient id="gate" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#0e0e13"/>
+    <stop offset="0.5" stop-color="#181820"/>
     <stop offset="1" stop-color="#0e0e13"/>
   </linearGradient>
   <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.9">
     <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
     <stop offset="1" stop-color="#0d0d12" stop-opacity="0.5"/>
   </radialGradient>
-  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
-  <filter id="mist" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="26"/></filter>
+  <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10"/></filter>
   <filter id="ripple" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3"/></filter>
 </defs>
 
-<!-- sky -->
 <rect width="3840" height="2160" fill="url(#sky)"/>
 
-<!-- stars, fading toward the horizon glow -->
+<!-- stars -->
 <g fill="#dcd7ba">
-  <circle cx="300" cy="220" r="3" opacity="0.5"/><circle cx="760" cy="140" r="2" opacity="0.35"/>
-  <circle cx="1200" cy="360" r="2.5" opacity="0.4"/><circle cx="520" cy="560" r="2" opacity="0.3"/>
-  <circle cx="1650" cy="200" r="2" opacity="0.35"/><circle cx="2280" cy="300" r="3" opacity="0.4"/>
-  <circle cx="2850" cy="180" r="2" opacity="0.35"/><circle cx="3350" cy="330" r="2.5" opacity="0.45"/>
-  <circle cx="3640" cy="150" r="2" opacity="0.3"/><circle cx="960" cy="700" r="2" opacity="0.22"/>
-  <circle cx="3100" cy="620" r="2" opacity="0.2"/><circle cx="180" cy="900" r="2" opacity="0.18"/>
+  <circle cx="330" cy="240" r="3" opacity="0.5"/><circle cx="820" cy="150" r="2" opacity="0.35"/>
+  <circle cx="1300" cy="320" r="2.5" opacity="0.4"/><circle cx="560" cy="540" r="2" opacity="0.3"/>
+  <circle cx="1780" cy="190" r="2" opacity="0.35"/><circle cx="2360" cy="280" r="3" opacity="0.4"/>
+  <circle cx="2940" cy="170" r="2" opacity="0.35"/><circle cx="3420" cy="350" r="2.5" opacity="0.45"/>
+  <circle cx="3680" cy="140" r="2" opacity="0.3"/><circle cx="1020" cy="680" r="2" opacity="0.22"/>
+  <circle cx="3150" cy="600" r="2" opacity="0.2"/><circle cx="140" cy="860" r="2" opacity="0.2"/>
 </g>
 
-<!-- setting sun, half sunk at the horizon -->
-<circle cx="1920" cy="1290" r="760" fill="url(#sunglow)"/>
-<g clip-path="polygon(0px 0px, 3840px 0px, 3840px 1290px, 0px 1290px)">
-  <circle cx="1920" cy="1400" r="330" fill="url(#sun)"/>
-  <g fill="#2b2436" opacity="0.9">
-    <rect x="1580" y="1218" width="680" height="12"/>
-    <rect x="1580" y="1168" width="680" height="9"/>
-    <rect x="1580" y="1124" width="680" height="6"/>
+<!-- waterline -->
+<!-- sun: low over the horizon, framed by the gate opening -->
+<circle cx="1920" cy="1160" r="700" fill="url(#sunglow)"/>
+<g clip-path="polygon(0px 0px, 3840px 0px, 3840px 1450px, 0px 1450px)">
+  <circle cx="1920" cy="1210" r="260" fill="url(#sun)"/>
+  <g fill="#33263a" opacity="0.85" clip-path="circle(260px at 1920px 1210px)">
+    <rect x="1660" y="1330" width="520" height="16"/>
+    <rect x="1660" y="1272" width="520" height="11"/>
+    <rect x="1660" y="1222" width="520" height="7"/>
   </g>
 </g>
 
 <!-- sea -->
-<rect y="1290" width="3840" height="870" fill="url(#sea)"/>
+<rect y="1450" width="3840" height="710" fill="url(#sea)"/>
 
 <!-- sun path on the water -->
 <g stroke="#ff9e3b" stroke-linecap="round" filter="url(#ripple)">
-  <line x1="1690" y1="1330" x2="2150" y2="1330" stroke-width="14" opacity="0.55"/>
-  <line x1="1740" y1="1380" x2="2090" y2="1380" stroke-width="12" opacity="0.45"/>
-  <line x1="1660" y1="1435" x2="2180" y2="1435" stroke-width="12" opacity="0.4"/>
-  <line x1="1780" y1="1495" x2="2060" y2="1495" stroke-width="10" opacity="0.35"/>
-  <line x1="1700" y1="1560" x2="2130" y2="1560" stroke-width="10" opacity="0.3"/>
-  <line x1="1810" y1="1640" x2="2040" y2="1640" stroke-width="9" opacity="0.25"/>
-  <line x1="1730" y1="1730" x2="2100" y2="1730" stroke-width="8" opacity="0.2"/>
-  <line x1="1850" y1="1840" x2="2010" y2="1840" stroke-width="8" opacity="0.15"/>
+  <line x1="1750" y1="1487" x2="2090" y2="1487" stroke-width="13" opacity="0.5"/>
+  <line x1="1800" y1="1536" x2="2050" y2="1536" stroke-width="11" opacity="0.42"/>
+  <line x1="1720" y1="1590" x2="2110" y2="1590" stroke-width="11" opacity="0.36"/>
+  <line x1="1830" y1="1652" x2="2020" y2="1652" stroke-width="10" opacity="0.3"/>
+  <line x1="1760" y1="1725" x2="2080" y2="1725" stroke-width="9" opacity="0.24"/>
+  <line x1="1850" y1="1810" x2="2000" y2="1810" stroke-width="8" opacity="0.18"/>
+  <line x1="1790" y1="1910" x2="2050" y2="1910" stroke-width="8" opacity="0.13"/>
 </g>
 
-<!-- distant shoreline -->
-<path d="M 0 1265 C 400 1250, 800 1258, 1100 1268 L 1100 1290 L 0 1290 Z" fill="#12121a" opacity="0.9"/>
-<path d="M 2760 1268 C 3100 1255, 3500 1252, 3840 1262 L 3840 1290 L 2760 1290 Z" fill="#12121a" opacity="0.9"/>
+<!-- distant shore hints -->
+<path d="M 0 1425 C 350 1412, 700 1418, 980 1428 L 980 1450 L 0 1450 Z" fill="#141219" opacity="0.9"/>
+<path d="M 2880 1428 C 3200 1416, 3550 1412, 3840 1424 L 3840 1450 L 2880 1450 Z" fill="#141219" opacity="0.9"/>
 
-<!-- THE GATE (Itsukushima-style, slightly off-center left) -->
+<!-- THE GATE — tall, standing clearly above the water -->
 <g>
-  <!-- main pillars, tapered, with lean -->
-  <path d="M 1180 800 L 1256 800 L 1286 1330 L 1136 1330 Z" fill="url(#gate)"/>
-  <path d="M 2584 800 L 2660 800 L 2704 1330 L 2554 1330 Z" fill="url(#gate)"/>
-  <!-- support posts + struts -->
-  <rect x="1010" y="1060" width="46" height="270" fill="url(#gate)"/>
-  <rect x="2790" y="1060" width="46" height="270" fill="url(#gate)"/>
-  <path d="M 1032 1076 L 1198 950 L 1214 986 L 1050 1108 Z" fill="url(#gate)"/>
-  <path d="M 2812 1076 L 2646 950 L 2630 986 L 2794 1108 Z" fill="url(#gate)"/>
-  <!-- kasagi: curved top lintel with upswept tips -->
-  <path d="M 920 700 C 1400 640, 2440 640, 2920 700 L 2906 742 C 2440 690, 1400 690, 934 742 Z" fill="url(#gate)"/>
-  <!-- shimaki under kasagi -->
-  <path d="M 985 742 C 1420 696, 2420 696, 2855 742 L 2855 800 C 2420 760, 1420 760, 985 800 Z" fill="url(#gate)"/>
-  <!-- nuki crossbar -->
-  <rect x="1090" y="965" width="1660" height="58" fill="url(#gate)"/>
-  <!-- gakuzuka center strut + plaque -->
-  <rect x="1888" y="800" width="64" height="165" fill="url(#gate)"/>
-  <rect x="1860" y="830" width="120" height="105" rx="8" fill="#0e0e13"/>
-  <rect x="1872" y="842" width="96" height="81" rx="5" fill="none" stroke="#54e3b2" stroke-width="4" opacity="0.7"/>
-  <!-- mint edge light along the kasagi -->
-  <path d="M 920 700 C 1400 640, 2440 640, 2920 700" fill="none" stroke="#54e3b2" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
-  <path d="M 920 700 C 1400 640, 2440 640, 2920 700" fill="none" stroke="#54e3b2" stroke-width="34" stroke-linecap="round" opacity="0.18" filter="url(#soft)"/>
-  <!-- subtle rim light on pillar sun-side edges -->
-  <line x1="1256" y1="806" x2="1284" y2="1310" stroke="#ff9e3b" stroke-width="5" opacity="0.5"/>
-  <line x1="2584" y1="806" x2="2556" y2="1310" stroke="#ff9e3b" stroke-width="5" opacity="0.5"/>
+  <!-- pillars: feet at the waterline, tall and slightly tapered inward -->
+  <path d="M 1462 620 L 1530 620 L 1560 1450 L 1424 1450 Z" fill="url(#gate)"/>
+  <path d="M 2310 620 L 2378 620 L 2416 1450 L 2280 1450 Z" fill="url(#gate)"/>
+  <!-- nuki crossbar, passing through both pillars -->
+  <rect x="1350" y="900" width="1140" height="52" fill="url(#gate)"/>
+  <!-- gakuzuka center strut -->
+  <rect x="1892" y="740" width="56" height="160" fill="url(#gate)"/>
+  <!-- shimaki (straight beam) -->
+  <path d="M 1330 660 C 1720 630, 2120 630, 2510 660 L 2510 742 C 2120 714, 1720 714, 1330 742 Z" fill="url(#gate)"/>
+  <!-- kasagi: curved top lintel, upswept tips, wider than shimaki -->
+  <path d="M 1240 588 C 1690 522, 2150 522, 2600 588 L 2580 646 C 2140 588, 1700 588, 1260 646 Z" fill="url(#gate)"/>
+  <!-- mint edge light on the kasagi -->
+  <path d="M 1240 588 C 1690 522, 2150 522, 2600 588" fill="none" stroke="#54e3b2" stroke-width="9" stroke-linecap="round" opacity="0.95"/>
+  <path d="M 1240 588 C 1690 522, 2150 522, 2600 588" fill="none" stroke="#54e3b2" stroke-width="30" stroke-linecap="round" opacity="0.18" filter="url(#soft)"/>
+  <!-- warm rim light on pillar inner edges (sun side) -->
+  <line x1="1530" y1="640" x2="1554" y2="1440" stroke="#ff9e3b" stroke-width="5" opacity="0.55"/>
+  <line x1="2310" y1="640" x2="2286" y2="1440" stroke="#ff9e3b" stroke-width="5" opacity="0.55"/>
 </g>
 
-<!-- mist bands drifting across the gate legs -->
-<g fill="#7aa89f" filter="url(#mist)">
-  <ellipse cx="1500" cy="1235" rx="900" ry="42" opacity="0.10"/>
-  <ellipse cx="2500" cy="1180" rx="800" ry="36" opacity="0.08"/>
-  <ellipse cx="1000" cy="1300" rx="700" ry="30" opacity="0.10"/>
-</g>
-
-<!-- gate reflection, broken by ripples -->
-<g opacity="0.5">
-  <g stroke="#181820" stroke-width="26" filter="url(#ripple)">
-    <line x1="1205" y1="1345" x2="1220" y2="1560"/><line x1="1230" y1="1590" x2="1238" y2="1730"/>
-    <line x1="1248" y1="1760" x2="1252" y2="1860"/>
-    <line x1="2620" y1="1345" x2="2608" y2="1560"/><line x1="2596" y1="1590" x2="2590" y2="1730"/>
-    <line x1="2580" y1="1760" x2="2576" y2="1860"/>
+<!-- gate reflection: broken vertical wobbles directly below the pillars -->
+<g opacity="0.55" filter="url(#ripple)">
+  <g stroke="#0e0e13" stroke-width="30">
+    <line x1="1496" y1="1462" x2="1508" y2="1600"/><line x1="1516" y1="1628" x2="1524" y2="1760"/>
+    <line x1="1530" y1="1790" x2="1536" y2="1880"/>
+    <line x1="2344" y1="1462" x2="2334" y2="1600"/><line x1="2326" y1="1628" x2="2320" y2="1760"/>
+    <line x1="2314" y1="1790" x2="2310" y2="1880"/>
   </g>
-  <g stroke="#54e3b2" stroke-width="7" filter="url(#ripple)">
-    <line x1="1150" y1="1400" x2="1330" y2="1400" opacity="0.35"/>
-    <line x1="1170" y1="1500" x2="1300" y2="1500" opacity="0.28"/>
-    <line x1="2540" y1="1420" x2="2700" y2="1420" opacity="0.35"/>
-    <line x1="2560" y1="1530" x2="2680" y2="1530" opacity="0.28"/>
+  <line x1="1400" y1="1476" x2="2440" y2="1476" stroke="#0e0e13" stroke-width="16"/>
+  <g stroke="#54e3b2" stroke-width="6">
+    <line x1="1430" y1="1520" x2="1590" y2="1520" opacity="0.3"/>
+    <line x1="2260" y1="1540" x2="2410" y2="1540" opacity="0.3"/>
+    <line x1="1460" y1="1650" x2="1570" y2="1650" opacity="0.22"/>
+    <line x1="2290" y1="1670" x2="2390" y2="1670" opacity="0.22"/>
   </g>
 </g>
 
-<!-- water texture: sparse dark ripple strokes -->
+<!-- water texture -->
 <g stroke="#16161d" stroke-width="8" stroke-linecap="round" opacity="0.7">
-  <path d="M 300 1480 q 90 -18 180 0" fill="none"/>
-  <path d="M 700 1600 q 110 -20 220 0" fill="none"/>
-  <path d="M 3050 1520 q 100 -18 200 0" fill="none"/>
-  <path d="M 3350 1680 q 90 -16 180 0" fill="none"/>
-  <path d="M 500 1820 q 120 -22 240 0" fill="none"/>
-  <path d="M 2900 1900 q 120 -22 240 0" fill="none"/>
-  <path d="M 1300 1980 q 130 -24 260 0" fill="none"/>
+  <path d="M 320 1560 q 90 -18 180 0" fill="none"/>
+  <path d="M 720 1680 q 110 -20 220 0" fill="none"/>
+  <path d="M 3080 1600 q 100 -18 200 0" fill="none"/>
+  <path d="M 3380 1760 q 90 -16 180 0" fill="none"/>
+  <path d="M 520 1900 q 120 -22 240 0" fill="none"/>
+  <path d="M 2930 1960 q 120 -22 240 0" fill="none"/>
+  <path d="M 1200 2040 q 130 -24 260 0" fill="none"/>
 </g>
 <g stroke="#54e3b2" stroke-width="5" stroke-linecap="round">
-  <path d="M 350 1470 q 90 -18 180 0" fill="none" opacity="0.20"/>
-  <path d="M 3100 1510 q 100 -18 200 0" fill="none" opacity="0.20"/>
-  <path d="M 760 1592 q 110 -20 220 0" fill="none" opacity="0.15"/>
-  <path d="M 1360 1970 q 130 -24 260 0" fill="none" opacity="0.15"/>
+  <path d="M 370 1550 q 90 -18 180 0" fill="none" opacity="0.2"/>
+  <path d="M 3130 1590 q 100 -18 200 0" fill="none" opacity="0.2"/>
+  <path d="M 780 1672 q 110 -20 220 0" fill="none" opacity="0.15"/>
+  <path d="M 1260 2030 q 130 -24 260 0" fill="none" opacity="0.15"/>
 </g>
 
-<!-- birds -->
-<g stroke="#0e0e13" stroke-width="9" stroke-linecap="round" fill="none">
-  <path d="M 800 480 q 45 -38 90 0 M 890 480 q 45 -38 90 0"/>
-  <path d="M 1060 570 q 34 -28 68 0 M 1128 570 q 34 -28 68 0"/>
-  <path d="M 3120 760 q 30 -25 60 0 M 3180 760 q 30 -25 60 0"/>
+<!-- birds, high and small -->
+<g stroke="#0e0e13" stroke-width="8" stroke-linecap="round" fill="none">
+  <path d="M 900 430 q 40 -34 80 0 M 980 430 q 40 -34 80 0"/>
+  <path d="M 1150 520 q 30 -25 60 0 M 1210 520 q 30 -25 60 0"/>
+  <path d="M 2980 640 q 28 -23 56 0 M 3036 640 q 28 -23 56 0"/>
 </g>
 
-<!-- vignette -->
 <rect width="3840" height="2160" fill="url(#vignette)"/>
 </svg>
 </body></html>
