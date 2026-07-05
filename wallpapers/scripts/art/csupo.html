@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head><style>html,body{margin:0;padding:0;overflow:hidden}</style></head>
+<body>
+<svg width="3840" height="2160" viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bg" cx="0.38" cy="0.42" r="1">
+    <stop offset="0" stop-color="#23232e"/>
+    <stop offset="0.55" stop-color="#1f1f28"/>
+    <stop offset="1" stop-color="#16161d"/>
+  </radialGradient>
+  <radialGradient id="spiralGlow" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#54e3b2" stop-opacity="0.16"/>
+    <stop offset="1" stop-color="#54e3b2" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="26"/></filter>
+  <filter id="rough2"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="12" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="18"/></filter>
+  <pattern id="dots" width="72" height="72" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+    <circle cx="14" cy="14" r="7" fill="#e6c384" opacity="0.5"/>
+  </pattern>
+  <pattern id="dots2" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+    <circle cx="12" cy="12" r="5" fill="#7e9cd8" opacity="0.45"/>
+  </pattern>
+</defs>
+
+<rect width="3840" height="2160" fill="url(#bg)"/>
+
+<!-- torn-paper tonal fields (wobbly, Klasky-Csupo backdrop energy) -->
+<g filter="url(#rough)">
+  <path d="M -50 1350 C 500 1250, 1100 1420, 1750 1330 C 2450 1230, 3100 1400, 3890 1300 L 3890 2210 L -50 2210 Z" fill="#1a1a22"/>
+  <path d="M -50 1700 C 600 1620, 1300 1760, 2000 1690 C 2700 1620, 3300 1740, 3890 1680 L 3890 2210 L -50 2210 Z" fill="#16161d"/>
+  <path d="M 2500 -50 C 2450 400, 2600 800, 2520 1200 C 2470 1500, 2560 1800, 2510 2210 L 3890 2210 L 3890 -50 Z" fill="#1c1c26" opacity="0.85"/>
+</g>
+
+<!-- dotted texture fields -->
+<g filter="url(#rough2)">
+  <path d="M 2700 200 L 3700 260 L 3620 900 L 2640 830 Z" fill="url(#dots)" opacity="0.8"/>
+  <path d="M 240 1500 L 1050 1460 L 1100 2050 L 300 2090 Z" fill="url(#dots2)" opacity="0.8"/>
+</g>
+
+<!-- THE SPIRAL: big wobbly hand-drawn mint spiral, the anchor -->
+<circle cx="1450" cy="900" r="760" fill="url(#spiralGlow)"/>
+<g transform="translate(1450 900) rotate(-14)" filter="url(#rough2)">
+  <path d="M 0 0
+           C 90 -30, 130 60, 60 120 C -40 200, -190 120, -190 -20
+           C -190 -200, 10 -320, 200 -260 C 430 -190, 500 60, 400 260
+           C 280 500, -60 560, -300 420 C -570 260, -620 -120, -430 -370
+           C -220 -650, 230 -700, 520 -520"
+        fill="none" stroke="#54e3b2" stroke-width="58" stroke-linecap="round"/>
+</g>
+
+<!-- terracotta starburst, top right, hand-cut points -->
+<g transform="translate(3080 460) rotate(8)" filter="url(#rough2)">
+  <path d="M 0 -340 L 78 -108 L 320 -122 L 122 24 L 208 268 L 0 132 L -208 268 L -122 24 L -320 -122 L -78 -108 Z"
+        fill="#ff9e3b"/>
+  <circle cx="0" cy="0" r="74" fill="#1f1f28"/>
+  <circle cx="0" cy="0" r="34" fill="#e6c384"/>
+</g>
+
+<!-- violet ribbon sweeping under the spiral -->
+<g filter="url(#rough)">
+  <path d="M -60 1780 C 500 1560, 900 1900, 1500 1740 C 2100 1580, 2500 1880, 3100 1700 C 3450 1600, 3700 1680, 3900 1620"
+        fill="none" stroke="#b06ecf" stroke-width="86" stroke-linecap="round" opacity="0.9"/>
+  <path d="M -60 1820 C 500 1620, 900 1940, 1500 1790 C 2100 1640, 2500 1930, 3100 1760 C 3450 1660, 3700 1740, 3900 1680"
+        fill="none" stroke="#957fb8" stroke-width="22" stroke-linecap="round" opacity="0.6"/>
+</g>
+
+<!-- wobbly frame fragments (K-C loves broken borders) -->
+<g fill="none" stroke-linecap="round" filter="url(#rough2)">
+  <path d="M 300 300 L 900 260 L 940 700" stroke="#e46876" stroke-width="30"/>
+  <path d="M 3560 1300 L 3620 1800 L 3200 1860" stroke="#98bb6c" stroke-width="30"/>
+</g>
+
+<!-- scribble accents, placed not scattered -->
+<g fill="none" stroke-linecap="round" filter="url(#rough2)">
+  <path d="M 2350 1180 q 60 -70 120 0 t 120 0 t 120 0" stroke="#e6c384" stroke-width="20"/>
+  <path d="M 520 800 q 50 -60 100 0 t 100 0" stroke="#7e9cd8" stroke-width="18"/>
+  <path d="M 3230 980 q 45 -55 90 0 t 90 0" stroke="#54e3b2" stroke-width="16"/>
+</g>
+
+<!-- squiggle worm, bottom left counterweight -->
+<g filter="url(#rough2)">
+  <path d="M 350 1950 C 430 1850, 530 1850, 610 1950 C 690 2050, 790 2050, 870 1950 C 950 1850, 1050 1850, 1130 1950"
+        fill="none" stroke="#e46876" stroke-width="44" stroke-linecap="round"/>
+</g>
+
+<!-- floating donut + plus, small satellites of the spiral -->
+<g filter="url(#rough2)">
+  <circle cx="2440" cy="420" r="95" fill="none" stroke="#7e9cd8" stroke-width="44"/>
+  <path d="M 660 1180 h 130 M 725 1115 v 130" stroke="#e6c384" stroke-width="38" stroke-linecap="round" fill="none"/>
+</g>
+
+<!-- spiral center eye: tiny parchment dot for focus -->
+<circle cx="1450" cy="900" r="26" fill="#dcd7ba" filter="url(#rough2)"/>
+
+<!-- film grain vignette -->
+<radialGradient id="vig" cx="0.45" cy="0.45" r="0.95">
+  <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+  <stop offset="1" stop-color="#0d0d12" stop-opacity="0.55"/>
+</radialGradient>
+<rect width="3840" height="2160" fill="url(#vig)"/>
+</svg>
+</body></html>

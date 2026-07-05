@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html><head><style>html,body{margin:0;padding:0;overflow:hidden}</style></head>
+<body>
+<svg width="3840" height="2160" viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#16161d"/>
+    <stop offset="0.5" stop-color="#1a1a22"/>
+    <stop offset="1" stop-color="#16161d"/>
+  </linearGradient>
+  <linearGradient id="stalkFar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#181820"/>
+    <stop offset="0.5" stop-color="#1f1f28"/>
+    <stop offset="1" stop-color="#16161d"/>
+  </linearGradient>
+  <linearGradient id="stalkMid" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1a1a22"/>
+    <stop offset="0.35" stop-color="#26403c"/>
+    <stop offset="0.75" stop-color="#1d2825"/>
+    <stop offset="1" stop-color="#16161d"/>
+  </linearGradient>
+  <linearGradient id="stalkNear" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1d2825"/>
+    <stop offset="0.3" stop-color="#3a6a5f"/>
+    <stop offset="0.62" stop-color="#26403c"/>
+    <stop offset="1" stop-color="#141a18"/>
+  </linearGradient>
+  <linearGradient id="rimFade" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#54e3b2" stop-opacity="0"/>
+    <stop offset="0.35" stop-color="#54e3b2" stop-opacity="0.7"/>
+    <stop offset="0.7" stop-color="#54e3b2" stop-opacity="0.25"/>
+    <stop offset="1" stop-color="#54e3b2" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="shaft" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#54e3b2" stop-opacity="0.10"/>
+    <stop offset="1" stop-color="#54e3b2" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.8">
+    <stop offset="0.5" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#0d0d12" stop-opacity="0.6"/>
+  </radialGradient>
+  <filter id="blurFar" x="-30%" y="-5%" width="160%" height="110%"><feGaussianBlur stdDeviation="16"/></filter>
+  <filter id="blurLeaf" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="glow" x="-300%" y="-300%" width="700%" height="700%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+
+<rect width="3840" height="2160" fill="url(#bg)"/>
+
+<!-- far layer: blurred dim stalks -->
+<g filter="url(#blurFar)">
+  <rect x="180"  y="0" width="90"  height="2160" fill="url(#stalkFar)"/>
+  <rect x="640"  y="0" width="70"  height="2160" fill="url(#stalkFar)" transform="rotate(2 675 1080)"/>
+  <rect x="1080" y="0" width="85"  height="2160" fill="url(#stalkFar)" transform="rotate(-2 1122 1080)"/>
+  <rect x="1620" y="0" width="65"  height="2160" fill="url(#stalkFar)" transform="rotate(1.5 1652 1080)"/>
+  <rect x="2100" y="0" width="90"  height="2160" fill="url(#stalkFar)"/>
+  <rect x="2580" y="0" width="70"  height="2160" fill="url(#stalkFar)" transform="rotate(-1.5 2615 1080)"/>
+  <rect x="3060" y="0" width="85"  height="2160" fill="url(#stalkFar)" transform="rotate(2 3102 1080)"/>
+  <rect x="3480" y="0" width="75"  height="2160" fill="url(#stalkFar)" transform="rotate(-1 3517 1080)"/>
+</g>
+
+<!-- light shafts slanting through -->
+<g>
+  <polygon points="900,0 1250,0 700,2160 420,2160" fill="url(#shaft)"/>
+  <polygon points="2300,0 2560,0 2100,2160 1900,2160" fill="url(#shaft)"/>
+  <polygon points="3350,0 3560,0 3200,2160 3030,2160" fill="url(#shaft)"/>
+</g>
+
+<!-- mid layer stalks -->
+<g>
+  <g transform="rotate(1.2 480 1080)">
+    <rect x="440" y="0" width="130" height="2160" fill="url(#stalkMid)"/>
+    <g fill="#0e0e13"><rect x="432" y="360" width="146" height="30" rx="14"/><rect x="432" y="900" width="146" height="30" rx="14"/><rect x="432" y="1450" width="146" height="30" rx="14"/><rect x="432" y="1960" width="146" height="30" rx="14"/></g>
+    <g fill="#7aa89f" opacity="0.5"><rect x="432" y="390" width="146" height="6" rx="3"/><rect x="432" y="930" width="146" height="6" rx="3"/><rect x="432" y="1480" width="146" height="6" rx="3"/><rect x="432" y="1990" width="146" height="6" rx="3"/></g>
+  </g>
+  <g transform="rotate(-1.6 1420 1080)">
+    <rect x="1380" y="0" width="115" height="2160" fill="url(#stalkMid)"/>
+    <g fill="#0e0e13"><rect x="1372" y="240" width="131" height="28" rx="13"/><rect x="1372" y="760" width="131" height="28" rx="13"/><rect x="1372" y="1290" width="131" height="28" rx="13"/><rect x="1372" y="1800" width="131" height="28" rx="13"/></g>
+    <g fill="#7aa89f" opacity="0.5"><rect x="1372" y="268" width="131" height="6" rx="3"/><rect x="1372" y="788" width="131" height="6" rx="3"/><rect x="1372" y="1318" width="131" height="6" rx="3"/><rect x="1372" y="1828" width="131" height="6" rx="3"/></g>
+  </g>
+  <g transform="rotate(0.8 2900 1080)">
+    <rect x="2860" y="0" width="120" height="2160" fill="url(#stalkMid)"/>
+    <g fill="#0e0e13"><rect x="2852" y="430" width="136" height="28" rx="13"/><rect x="2852" y="980" width="136" height="28" rx="13"/><rect x="2852" y="1530" width="136" height="28" rx="13"/></g>
+    <g fill="#7aa89f" opacity="0.5"><rect x="2852" y="458" width="136" height="6" rx="3"/><rect x="2852" y="1008" width="136" height="6" rx="3"/><rect x="2852" y="1558" width="136" height="6" rx="3"/></g>
+  </g>
+</g>
+
+<!-- leaf sprays (mid depth, slight blur) -->
+<g filter="url(#blurLeaf)">
+  <g transform="translate(1450 300) rotate(-24)" fill="#7aa89f" opacity="0.75">
+    <ellipse cx="0" cy="0" rx="150" ry="26"/><ellipse cx="120" cy="60" rx="170" ry="28" transform="rotate(28)"/><ellipse cx="-60" cy="80" rx="140" ry="24" transform="rotate(-30)"/>
+  </g>
+  <g transform="translate(600 180) rotate(15)" fill="#54e3b2" opacity="0.5">
+    <ellipse cx="0" cy="0" rx="140" ry="24"/><ellipse cx="110" cy="50" rx="150" ry="25" transform="rotate(30)"/><ellipse cx="-70" cy="60" rx="120" ry="22" transform="rotate(-26)"/>
+  </g>
+  <g transform="translate(3050 260) rotate(-10)" fill="#7aa89f" opacity="0.65">
+    <ellipse cx="0" cy="0" rx="150" ry="25"/><ellipse cx="130" cy="55" rx="160" ry="27" transform="rotate(26)"/><ellipse cx="-80" cy="70" rx="130" ry="23" transform="rotate(-32)"/>
+  </g>
+</g>
+
+<!-- near layer: two thick stalks with mint rim light -->
+<g transform="rotate(-2.2 950 1080)">
+  <rect x="850" y="0" width="220" height="2160" fill="url(#stalkNear)"/>
+  <g fill="#0e0e13"><rect x="838" y="500" width="244" height="44" rx="20"/><rect x="838" y="1200" width="244" height="44" rx="20"/><rect x="838" y="1850" width="244" height="44" rx="20"/></g>
+  <g fill="#54e3b2" opacity="0.7"><rect x="838" y="544" width="244" height="9" rx="4"/><rect x="838" y="1244" width="244" height="9" rx="4"/><rect x="838" y="1894" width="244" height="9" rx="4"/></g>
+  <rect x="1050" y="0" width="12" height="2160" fill="url(#rimFade)"/>
+</g>
+<g transform="rotate(1.8 2450 1080)">
+  <rect x="2350" y="0" width="200" height="2160" fill="url(#stalkNear)"/>
+  <g fill="#0e0e13"><rect x="2338" y="300" width="224" height="40" rx="18"/><rect x="2338" y="950" width="224" height="40" rx="18"/><rect x="2338" y="1600" width="224" height="40" rx="18"/></g>
+  <g fill="#54e3b2" opacity="0.7"><rect x="2338" y="340" width="224" height="9" rx="4"/><rect x="2338" y="990" width="224" height="9" rx="4"/><rect x="2338" y="1640" width="224" height="9" rx="4"/></g>
+  <rect x="2530" y="0" width="11" height="2160" fill="url(#rimFade)"/>
+</g>
+
+<!-- near leaves, sharp -->
+<g>
+  <g transform="translate(1080 620) rotate(30)" fill="#54e3b2" opacity="0.85">
+    <ellipse cx="0" cy="0" rx="190" ry="30"/><ellipse cx="150" cy="70" rx="200" ry="32" transform="rotate(30)"/><ellipse cx="-90" cy="90" rx="160" ry="27" transform="rotate(-28)"/>
+  </g>
+  <g transform="translate(2280 1120) rotate(-18)" fill="#54e3b2" opacity="0.7">
+    <ellipse cx="0" cy="0" rx="170" ry="28"/><ellipse cx="130" cy="60" rx="180" ry="30" transform="rotate(26)"/>
+  </g>
+</g>
+
+<!-- fireflies -->
+<g fill="#54e3b2">
+  <circle cx="1720" cy="820" r="26" opacity="0.5" filter="url(#glow)"/><circle cx="1720" cy="820" r="7"/>
+  <circle cx="2050" cy="1500" r="22" opacity="0.4" filter="url(#glow)"/><circle cx="2050" cy="1500" r="6"/>
+  <circle cx="680" cy="1650" r="20" opacity="0.4" filter="url(#glow)"/><circle cx="680" cy="1650" r="5"/>
+  <circle cx="3230" cy="1180" r="24" opacity="0.45" filter="url(#glow)"/><circle cx="3230" cy="1180" r="6"/>
+  <circle cx="1250" cy="1900" r="16" opacity="0.35" filter="url(#glow)"/><circle cx="1250" cy="1900" r="4"/>
+  <circle cx="2700" cy="700" r="18" opacity="0.35" filter="url(#glow)"/><circle cx="2700" cy="700" r="5"/>
+</g>
+<g fill="#e6c384">
+  <circle cx="1500" cy="1350" r="18" opacity="0.35" filter="url(#glow)"/><circle cx="1500" cy="1350" r="5"/>
+  <circle cx="2950" cy="1850" r="16" opacity="0.3" filter="url(#glow)"/><circle cx="2950" cy="1850" r="4"/>
+</g>
+
+<rect width="3840" height="2160" fill="url(#vignette)"/>
+</svg>
+</body></html>
